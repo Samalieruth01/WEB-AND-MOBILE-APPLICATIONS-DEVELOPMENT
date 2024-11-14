@@ -1,8 +1,5 @@
-function maxDifference(arr) {
-    let max = Math.max(...arr);
-    let min = Math.min(...arr);
-    return max - min;
+function getRandomHexColor() {
+    return '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
 }
 
-let numbers = [1, 2, 3, 4, 5];
-console.log(maxDifference(numbers)); // Output: 4
+console.log(getRandomHexColor()); // Output: Random hex color code like "#a1b2c3"
