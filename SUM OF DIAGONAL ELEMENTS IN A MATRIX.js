@@ -1,14 +1,12 @@
-function sumDiagonal(matrix) {
-    let sum = 0;
-    for (let i = 0; i < matrix.length; i++) {
-        sum += matrix[i][i];
+function firstNonRepeatingChar(str) {
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+        if (str.indexOf(char) === str.lastIndexOf(char)) {
+            return char;
+        }
     }
-    return sum;
+    return null;
 }
 
-let matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-];
-console.log(sumDiagonal(matrix)); // Output: 15
+console.log(firstNonRepeatingChar("swiss")); // Output: "w"
+console.log(firstNonRepeatingChar("hello")); // Output: "h"
